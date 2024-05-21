@@ -1,0 +1,204 @@
+:root {
+  --color-text-main: #000000;
+  --color-text-sec: #ffffff;
+  --color-text-third: #8c8c8c;
+  --color-text-footer: #545454;
+
+  --color-accent-main: #ff6b08;
+  --color-accent-sec: #ff6b01;
+  --color-accent-third: #ff001b;
+
+  --color-bg-main: #ffffff;
+  --color-bg-sec: #f7f7f7;
+
+  --font-family: 'Roboto', sans-serif;
+  // --font-weight: 500;
+
+  --font-size-main: 12px;
+  --font-size-sec: 20px;
+  --font-size-third: 14px;
+  --font-size-fourth: 30px;
+
+  --border-radius: 5px;
+
+  --transition-duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$colorTextMain: #000000;
+$colorTextSec: #ffffff;
+$colorTextThird: #8c8c8c;
+$colorTextFooter: #545454;
+
+$colorAccentMain: #ff6b08;
+$colorAccentSec: #ff6b01;
+$colorAccentThird: #ff001b;
+
+$colorBgMain: #ffffff;
+$colorBgSec: #f7f7f7;
+
+$fontFamily: 'Roboto', sans-serif;
+$fontWeight: 500;
+
+$fontSizeMain: 12px;
+$fontSizeSec: 20px;
+$fontSizeThird: 14px;
+$fontSizeFourth: 30px;
+
+$borderRadius: 5px;
+
+$transitionDuration: 250ms;
+$timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1280px;
+
+.gallery {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 59px;
+    padding-bottom: 59px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+    @media screen and (max-width: 767.99px) {
+      max-width: 320px;
+    }
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 32px;
+      width: $tablet;
+      padding: 0 32px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      column-gap: 16px;
+      row-gap: 32px;
+      width: $laptop;
+      padding: 0 32px;
+    }
+  }
+}
+.movie-block {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  border-color: aqua;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.5em 0.5em -0.1em var(--color-text-footer);
+    transform: translateY(-0.25em);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 32px) / 2);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -90%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+      background: -webkit-linear-gradient(
+        left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+      -webkit-transform: skewX(-25deg);
+      transform: skewX(-25deg);
+    }
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: calc((100% - 2 * 16px) / 3);
+  }
+}
+.image {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 280px;
+  height: 402px;
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    width: 336px;
+    height: 455px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 395px;
+    height: 574px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.film-info {
+  padding: 10px;
+  max-width: 350px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 8px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 12px;
+  }
+
+  &__item {
+    font-weight: var(--font-weight);
+    font-size: var(--font-size-main);
+    line-height: 1.33;
+    color: var(--color-accent-main);
+
+    @media screen and (min-width: $laptop) {
+      font-size: var(--font-size-sec);
+      line-height: 1.2;
+    }
+  }
+  &--title {
+    text-transform: uppercase;
+    color: var(--color-text-main);
+  }
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}

@@ -1,0 +1,9 @@
+.loader {
+  fill: var(--color-accent-sec);
+  z-index: 10000;
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+  transition: opacity 75ms var(--timing-function);
+}

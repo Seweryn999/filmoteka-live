@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmoteka</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Filmoteka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <include src="./partials/library-header.html"></include>
+    <main>
+      <div class="gallery">
+        <ul id="films-container" class="gallery gallery__container movies-gallery"></ul>
+      </div>
+    </main>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/library-modal.html"></include>
+    <script defer type="module" src="./scripts/library.mjs"></script>
+    <script defer type="module" src="./scripts/modal-library.mjs"></script>
+    <script defer type="module" src="./scripts/library-watched-queue.mjs"></script>
+</body>
+</html>
