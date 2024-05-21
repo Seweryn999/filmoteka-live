@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector("[data-students-modal]"),t=document.querySelector("[students-modal-open");document.querySelector("[students-modal-close]");function n(){e.classList.toggle("is-hidden")}t.addEventListener("click",n),e.addEventListener("click",n),document.addEventListener("keydown",(function(t){"Escape"!==t.key||e.classList.contains("is-hidden")||n()}))}();
+//# sourceMappingURL=index.0d3e6cb9.js.map

@@ -1,0 +1,2 @@
+const e=document.querySelector("[data-students-modal]"),t=document.querySelector("[students-modal-open");document.querySelector("[students-modal-close]");function d(){e.classList.toggle("is-hidden")}t.addEventListener("click",d),e.addEventListener("click",d),document.addEventListener("keydown",(t=>{"Escape"!==t.key||e.classList.contains("is-hidden")||d()}));
+//# sourceMappingURL=index.b8ccf663.js.map
